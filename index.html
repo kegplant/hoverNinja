@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Disappearing Ninja</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(
+                function(){
+                    $('img').hover(
+                        function(){
+                            $(this).attr('temp',$(this).attr('src'));
+                            console.log($(this).attr('temp'));
+                            $(this).attr('src',$(this).attr('alt2'));
+                            console.log($(this).attr('temp'));
+                            //alert('abc!!!');
+                        },
+                        function(){
+                    
+                            $(this).attr('alt2',$(this).attr('src'));
+                            $(this).attr('src',$(this).attr('temp'));
+                            //alert('abc!!!');
+                    
+                        }
+            );
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja23.png">
+        </div>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja23.png">
+        </div>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja2.png">
+        </div>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja2.png">
+        </div>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja2.png">
+        </div>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja2.png">
+        </div>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja2.png">
+        </div>
+        <div>
+            <img src="images/ninja.png" alt2="images/ninja2.png">
+        </div>
+        <div>
+            <button>Restore</button>
+        </div>
+    </body>
+</html>
+            
